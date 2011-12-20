@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{186CB3B3-295F-4555-829F-D51806E2E2EA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Search</RootNamespace>
+    <AssemblyName>Search</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Search.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=2011.4.17.0, Culture=neutral, PublicKeyToken=cd8b63ad3d691a37, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithm\AStarGraphSearch.cs" />
+    <Compile Include="Algorithm\IGraphSearch.cs" />
+    <Compile Include="EightPuzzle\EightPuzzleAction.cs" />
+    <Compile Include="EightPuzzle\EightPuzzleActionFunction.cs" />
+    <Compile Include="EightPuzzle\EightPuzzleGoalTest.cs" />
+    <Compile Include="EightPuzzle\EightPuzzleHeuristicFunction.cs" />
+    <Compile Include="EightPuzzle\EightPuzzleResultFunction.cs" />
+    <Compile Include="EightPuzzle\EightPuzzleState.cs" />
+    <Compile Include="EightPuzzle\EightPuzzleStepCost.cs" />
+    <Compile Include="Framework\ActionFunction.cs" />
+    <Compile Include="Framework\GoalTest.cs" />
+    <Compile Include="Framework\HeuristicFunction.cs" />
+    <Compile Include="Framework\Node.cs" />
+    <Compile Include="Framework\StepCost.cs" />
+    <Compile Include="Framework\Problem.cs" />
+    <Compile Include="Algorithm\GraphSearch.cs" />
+    <Compile Include="Hyperlinks\WeblinkAction.cs" />
+    <Compile Include="Hyperlinks\WeblinkActionFunction.cs" />
+    <Compile Include="Hyperlinks\WeblinkGoalTest.cs" />
+    <Compile Include="Hyperlinks\WeblinkResultFunction.cs" />
+    <Compile Include="Hyperlinks\WeblinkState.cs" />
+    <Compile Include="Hyperlinks\WeblinkStepCost.cs" />
+    <Compile Include="Missionaries\MissionariesAction.cs" />
+    <Compile Include="Missionaries\MissionariesActionFunction.cs" />
+    <Compile Include="Missionaries\MissionariesResultFunction.cs" />
+    <Compile Include="Missionaries\MissionariesState.cs" />
+    <Compile Include="Missionaries\MissionariesGoalTest.cs" />
+    <Compile Include="Missionaries\MissionariesStepCost.cs" />
+    <Compile Include="PathFinding\PathFindingEnvironment.cs" />
+    <Compile Include="PathFinding\PathFindingAction.cs" />
+    <Compile Include="PathFinding\PathFindingActionFunction.cs" />
+    <Compile Include="PathFinding\PathFindingGoalTest.cs" />
+    <Compile Include="PathFinding\PathFindingHeuristicFunction.cs" />
+    <Compile Include="PathFinding\PathFindingResultFunction.cs" />
+    <Compile Include="PathFinding\PathFindingState.cs" />
+    <Compile Include="PathFinding\PathFindingStepCost.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Framework\ResultFunction.cs" />
+    <Compile Include="Romania\TravelState.cs" />
+    <Compile Include="Romania\TravelAction.cs" />
+    <Compile Include="Romania\TravelActionFunction.cs" />
+    <Compile Include="Romania\TravelGoalTest.cs" />
+    <Compile Include="Romania\TravelResultFunction.cs" />
+    <Compile Include="Romania\TravelStepCost.cs" />
+    <Compile Include="Sudoku\SudokuGoalTest.cs" />
+    <Compile Include="Sudoku\SudokuAction.cs" />
+    <Compile Include="Sudoku\SudokuActionFunction.cs" />
+    <Compile Include="Sudoku\SudokuResultFunction.cs" />
+    <Compile Include="Sudoku\SudokuState.cs" />
+    <Compile Include="Sudoku\SudokuStepCost.cs" />
+    <Compile Include="Types\Point.cs" />
+    <Compile Include="Types\PriorityQueue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libraries\MathNet.Numerics.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

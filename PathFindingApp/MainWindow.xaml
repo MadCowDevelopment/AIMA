@@ -1,0 +1,29 @@
+﻿<Window x:Class="PathFindingApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="768" Width="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button Grid.Column="0" Content="Start" Click="ButtonStartClick"/>
+            <Button Grid.Column="1" Content="Goal" Click="ButtonGoalClick"/>
+            <Button Grid.Column="2" Content="Rectangle" Click="ButtonRectangleClick"/>
+            <Button Grid.Column="3" Content="Solve!" Click="ButtonSolveClick"/>
+        </Grid>
+        
+        <Canvas Grid.Row="1" x:Name="DrawingCanvas" Background="LightBlue" 
+                Mouse.MouseDown="DrawingCanvas_MouseDown"/>
+        
+    </Grid>
+</Window>
